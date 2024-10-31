@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+$background-color-grey: #EEEFF1;
+$accent-color: $accent-color;
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +19,7 @@ a {
 }
 
 a.active {
-    color: #34547A;
+    color: $accent-color;
 }
 
 .text {
@@ -43,26 +46,26 @@ h2 {
 .header-wrapper {
     position: fixed;
     width: 100%;
-    background-color: #EEEFF1;
+    background-color: $background-color-grey;
 }
 
 header {
     padding: 40px 0px;
-}
-
-header nav a {
-    color: #000000;
-    text-transform: uppercase;
-    margin-right: 5%;
-    font-size: 16px;
-}
-
-header nav a:hover {
-    color: #3c71b2;
+    nav {
+        a {
+            color: #000000;
+            text-transform: uppercase;
+            margin-right: 5%;
+            font-size: 16px;
+        }
+        a:hover {
+            color: #3c71b2;
+        }
+    }
 }
 
 .main-wrapper {
-    background-color: #EEEFF1;
+    background-color: $background-color-grey;
 }
 
 section {
@@ -75,31 +78,28 @@ section.main-section {
     display: flex;
 }
 
-.main-section .main-content {
-    align-content: center;
-    /* width: 540px; */
-    height: 100%;
-}
-
-.main-section .main-content h1 {
-    margin-bottom: 60px;
-    font-weight: 500;
-}
-
-.main-section .main-content .btn {
-    margin-top: 65px;
-}
-
-.main-section .main-content .btn a {
-    text-transform: uppercase;
-    padding: 20px 40px;
-    font-size: 16px;
-    background: #34547A;
-    color: #ffffff;
-}
-
-.main-section .main-content .btn a:hover {
-    background: #5a86bc;
+.main-section {
+    .main-content {
+        align-content: center;
+        height: 100%;
+        h1 {
+            margin-bottom: 60px;
+            font-weight: 500;
+        }
+        .btn {
+            margin-top: 65px;
+            a {
+                text-transform: uppercase;
+                padding: 20px 40px;
+                font-size: 16px;
+                background: $accent-color;
+                color: #ffffff;
+            }
+            a:hover {
+                background: #5a86bc;
+            }
+        }
+    }
 }
 
 .about-wrapper {
@@ -111,22 +111,23 @@ section.about-section {
     height: 60vh;
 }
 
-.about-section .about-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-section .about-content .text {
-    text-align: center;
-    margin-top: 50px;
+.about-section {
+    .about-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .text {
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
 }
 
 .projects-wrapper {
-    background: #34547A;
+    background: $accent-color;
 }
 
 section.projects-section {
@@ -136,75 +137,71 @@ section.projects-section {
     align-items: center;
 }
 
-.projects-section .projects-content {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.projects-section {
+    .projects-content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        .project-item {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            p {
+                font-size: 16px;
+                span {
+                    font-size: 21px; 
+                }
+            }
+            .svg {
+                display: flex;
+                align-items: center;
+                margin-right: 15px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
 }
-
-.projects-section .projects-content .project-item {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-}
-
-.projects-section .projects-content .project-item p {
-    font-size: 16px;
-}
-
-.projects-section .projects-content .project-item p span {
-    font-size: 21px;    
-}
-
-.projects-section .projects-content .project-item svg {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-    width: 50px;
-    height: 50px;
-} 
 
 .process-wrapper {
     background: #EEEFF1;
 }
 
-.process-section .process-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.process-section .process-content .text {
-    text-align: center;
-    margin-top: 3%;
-}
-
-.process-section .process-content .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-img.video {
-    margin-top: 57px;
-    width: 70%;
-    position: relative;
-}
-
-img.play {
-    margin-top: 57px;
-    position: absolute;
-    width: 5%;
+.process-section {
+    .process-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .text {
+            text-align: center;
+            margin-top: 3%;
+        }
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img.video {
+                margin-top: 57px;
+                width: 70%;
+                position: relative;
+            }
+            img.play {
+                margin-top: 57px;
+                position: absolute;
+                width: 5%;
+            }
+        }
+    }
 }
 
 .footer-wrapper {
-    background: #34547A;
+    background: $accent-color;
 }
 
 footer {
@@ -214,17 +211,17 @@ footer {
     justify-content: center;
     padding: 40px;
     color: #ffffff;
+    .footer-content { 
+        h3 {
+            font-size: 21px;
+            font-weight: 500;
+        }
+        .footer-text {
+            margin-top: 20px;
+            font-size: 130px;
+        } 
+    }
 }
-
-footer .footer-content h3 {
-    font-size: 21px;
-    font-weight: 500;
-}
-
-footer .footer-content .footer-text {
-    margin-top: 20px;
-    font-size: 13px;
-} 
 
 @media (min-width: 1720px) {
     .text {
