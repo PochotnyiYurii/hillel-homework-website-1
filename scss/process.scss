@@ -1,0 +1,36 @@
+.process-wrapper {
+    background: $backgorung-color-grey;
+}
+
+.process-section {
+    .process-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .text {
+            text-align: center;
+            margin-top: 3%;
+        }
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+img {
+    &.video {
+        margin-top: 57px;
+        width: 70%;
+        position: relative;
+    }
+    &.play {
+        margin-top: 57px;
+        position: absolute;
+        width: 5%;
+    }
+}

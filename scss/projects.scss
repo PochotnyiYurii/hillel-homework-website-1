@@ -1,0 +1,39 @@
+.projects-wrapper {
+    background: $accent-color;
+}   
+
+section.projects-section {
+    height: 30vh;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.projects-section {
+    .projects-content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        .project-item {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            p {
+                font-size: 16px;
+                span {
+                    font-size: 21px;
+                }
+            }
+            svg {
+                display: flex;
+                align-items: center;
+                margin-right: 15px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
